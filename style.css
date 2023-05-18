@@ -1,0 +1,117 @@
+/* css reset  */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* starting the holiday container  */
+main {
+    min-height: inherit;
+    padding: 0rem clamp(0.75rem, calc(-2.12rem + 14.37vw), 10.00rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: #f2f2f0; */
+
+    background: url(/2023.png) right bottom no-repeat, url(/s.png) right top no-repeat;
+    background-position-x: 100%, 105.5%;
+    background-position-y: 100%, -17.5%;
+}
+
+header {
+    padding-block: clamp(2.00rem, calc(1.84rem + 0.78vw), 2.50rem);
+}
+
+header h1 {
+    color: #447EFB;
+    font-size: clamp(2.07rem, calc(1.17rem + 4.54vw), 4.54rem);
+    line-height: 4rem;
+}
+
+.holiday-container {
+    display: flex;
+    gap: clamp(3.00rem, calc(0.83rem + 10.87vw), 10.00rem);
+    flex-wrap: wrap;
+}
+
+.left-section,
+.right-section {
+    display: grid;
+    gap: 2rem;
+}
+
+.month .title {
+    background-color: #FFC861;
+    margin-block-end: .5rem;
+}
+
+footer {
+    padding-block: 2rem;
+}
+
+/* media query for the holiday container for mobile  */
+
+@media (max-width: 790.99px) {
+
+    main {
+        background: url(/2023.png) right bottom no-repeat, url(/s.png) right top no-repeat;
+        background-position-x: 108%, 114.5%;
+        background-position-y: 100%, -17.5%;
+    }
+
+
+    .holiday-container {
+        flex-direction: column;
+        gap: 0rem;
+        margin-block-start: 1rem;
+    }
+
+    .left-section,
+    .right-section {
+        gap: 1.5rem;
+    }
+
+}
