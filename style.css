@@ -29,6 +29,7 @@ html:focus-within {
 img,
 picture {
     max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -44,37 +45,45 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: url(/images/HolidayListBG.png) no-repeat cover fixed;
+    background-color: #f2f2f0;
+
 }
 
-/* starting the holiday container  */
+/* starting the main container  */
 main {
     min-height: inherit;
     padding: 0rem clamp(0.75rem, calc(-2.12rem + 14.37vw), 10.00rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-color: #f2f2f0; */
 
-    background: url(/2023.png) right bottom no-repeat, url(/s.png) right top no-repeat;
+    background: url(/images/2023.png) right bottom no-repeat, url(/images/VectorSmartObject.png) right top no-repeat;
     background-position-x: 100%, 105.5%;
     background-position-y: 100%, -17.5%;
 }
+
+
+/* header section  */
 
 header {
     padding-block: clamp(2.00rem, calc(1.84rem + 0.78vw), 2.50rem);
 }
 
-header h1 {
-    color: #447EFB;
-    font-size: clamp(2.07rem, calc(1.17rem + 4.54vw), 4.54rem);
-    line-height: 4rem;
+header .logo {
+    padding: 0.5rem 1rem;
 }
+
+header .h1 {
+    padding: 0.5rem 1rem;
+}
+
+/* starting the holiday container  */
 
 .holiday-container {
     display: flex;
     gap: clamp(3.00rem, calc(0.83rem + 10.87vw), 10.00rem);
-    flex-wrap: wrap;
 }
 
 .left-section,
@@ -84,12 +93,34 @@ header h1 {
 }
 
 .month .title {
-    background-color: #FFC861;
-    margin-block-end: .5rem;
+    background-color: #ffc861;
+    padding: 0.5rem 1rem;
+
+    font-size: 24px;
+    letter-spacing: 12px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #444444;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
 }
+
+.month .subtitle {
+    padding: 0.5rem 1rem;
+    font-size: 22px;
+    letter-spacing: 0px;
+    line-height: 40px;
+    color: #444444;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* starting the footer container  */
 
 footer {
     padding-block: 2rem;
+    font-size: 22px;
+
 }
 
 /* media query for the holiday container for mobile  */
@@ -97,15 +128,16 @@ footer {
 @media (max-width: 790.99px) {
 
     main {
-        background: url(/2023.png) right bottom no-repeat, url(/s.png) right top no-repeat;
+        background: url(/images/2023.png) right bottom no-repeat, url(/images/VectorSmartObject.png) right top no-repeat;
         background-position-x: 108%, 114.5%;
         background-position-y: 100%, -17.5%;
+        background-size: 50%, 40%;
     }
 
 
     .holiday-container {
         flex-direction: column;
-        gap: 0rem;
+        gap: 2rem;
         margin-block-start: 1rem;
     }
 
